@@ -28,6 +28,12 @@ li:hover {
 
 
 /* Main*/
+.sam2{
+  width: 300px;
+  height: 500px;
+}
+
+
 .main{
   margin-left: 100px;
   width: 800px;
@@ -37,19 +43,25 @@ li:hover {
 .sam {
   width: 100px;
   height: 100px;
-margin-top: 10px;}
+margin-top: 10px;
+margin-bottom: 50px;}
 .coldroite {
+
   float: right;
-  margin-right: 600px;
-  margin-top: 100px;
+  margin-right: -150px;
+  margin-top: 75px;
 }
 .colgauche {
   float: left;
 margin-left: 30px;}
 p {
   font-family: 'Chewy', cursive;
-margin-bottom: 86px;
+margin-bottom: 1px;
 font-size: 20px;}
+.disp{
+  display: inline-block;
+  font-size: 14px;
+}
 
 /* FOOTER */
 
