@@ -6,7 +6,13 @@ body {
 }
 
 /* Header*/
-
+.fixNavigation{
+  z-index: 9999;
+  position:fixed;
+   top: 0;
+   height: 80px;
+   width: 100%;
+}
 li {
   text-decoration: none;
   display: inline-block;
@@ -17,21 +23,37 @@ li {
 nav {
   width: 100%;
   height: 100px;
-  background-color: #6699CC;
+  background-color: #FECC00;
   opacity: 0.;
   border-bottom: 1px solid black;
   box-shadow: 1px 2px gray;
+
 }
 li:hover {
   font-weight: bold;
-  cursor: crosshair;
-}
+  text-decoration: none;
 
+
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
 /* Fin du header*/
 
 
 /* Main*/
+main{
+  width: 1000px;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
 
+}
 
 
 .sam2 {
@@ -49,14 +71,33 @@ li:hover {
   margin-top: 10px;
   margin-bottom: 50px;
 }
-.coldroite {
-  float: right;
-  margin-right: -150px;
-  margin-top: 75px;
-}
+
+
 .colgauche {
+
   float: left;
-  margin-left: 30px;
+width: 70%;
+padding: 30px;
+    box-sizing:border-box;
+ text-align: justify;
+ }
+ .coldroite {
+display: inline;
+  float: right;
+ padding: 2px;
+ width:30%;
+  margin-top: 75px;
+box-sizing: border-box;
+
+  }
+
+  .coldroite p{
+    margin-bottom: 10px;
+    margin-top: -35px;
+  }
+
+.starswars{
+  display: inline-block;
 }
 p {
   font-family: 'Chewy', cursive;
@@ -70,7 +111,7 @@ p {
 
 /* FOOTER */
 footer {
-  position: absolute;
+clear: both;
   margin-top: 60px;
   width: 100%;
   height: 150px;

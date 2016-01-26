@@ -10,8 +10,11 @@
   <link rel="stylesheet" type="text/css" href="style.css">
   <link rel="stylesheet" href="css/bootstrap-theme.min.css">
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Chewy' rel='stylesheet' type='text/css'>
+  <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
+
+
+
+
 </head>
 
 
@@ -20,11 +23,11 @@
 
   <!-- menu-->
   <header>
-    <nav>
+    <nav id="navigation">
       <ul>
-        <li>Acceuil </li>
-        <li> Forum</li>
-        <li> Contact </li>
+        <li><a href="#acceuil"> Acceuil </a></li>
+        <li> <a href="#foot">Derniers films</a> </li>
+
         <ul>
     </nav>
   </header>
@@ -32,31 +35,38 @@
 
   <!--Main -->
 
-  <main class="container">
-    <section class="centre">
+  <main id="acceuil">
+    <section>
       <div class="colgauche">
         <h1>MR nobody</H1>
         <img class="sam2" src="img/media" />
+        <p style="word-wrap: break-word;font-size: 13px;"> Le film raconte l'histoire de la vie de Nemo Nobody, âgé de 118 ans,</br> qui est le dernier mortel sur Terre après que la race humaine a atteint l'immortalité. </br>Le film utilise une narration non linéaire pour raconter l'histoire de différentes
+          vies de Nemo.</p>
       </div>
 
       <div class="coldroite">
-        <p>Star Wars - Le Réveil de la Force</p>
-        <img class="sam" src="img/stars.jpg" />
-  <p class="disp"> Dans une galaxie lointaine, très lointaine, un nouvel épisode de la saga "Star Wars", </br>30 ans après les événements du "Retour du Jedi"</p>
-        <p>Les Huit salopards</p>
+        <div class="starswars">
+          <h2>Star Wars - Le Réveil de la Force</h2>
+          <img class="sam" src="img/stars.jpg" />
+          <p class="disp"> Dans une galaxie lointaine, très lointaine, un nouvel épisode de la saga "Star Wars", </br>30 ans après les événements du "Retour du Jedi"</p>
+        </div>
+        <h2>Les Huit salopards</h2>
         <img class="sam" src="img/salo.jpg" />
-        <p class="disp"> Quelques années après la Guerre de Sécession, le chasseur de primes John Ruth, dit Le Bourreau,</br> fait route vers Red Rock, où il conduit sa prisonnière Daisy Domergue se faire pendre. </br>Sur leur route, ils rencontrent le Major Marquis Warren, un ancien soldat lui aussi devenu chasseur de primes...</p>
-        <p>Snoopy et les Peanuts - Le Film</p>
+        <p class="disp"> Quelques années après la Guerre de Sécession, le chasseur de primes John Ruth, dit Le Bourreau,</br> fait route vers Red Rock, où il conduit sa prisonnière Daisy Domergue se faire pendre. </br>Sur leur route, ils rencontrent le Major Marquis Warren,
+          un ancien soldat lui aussi devenu chasseur de primes...</p>
+        <h2>Snoopy et les Peanuts - Le Film</h2>
         <img class="sam" src="img/snoo.jpg" />
         <p class="disp"> Snoopy, Charlie Brown, Lucy, Linus et le reste du gang bien aimé des « Peanuts »</br> font leurs débuts sur grand écran, comme vous ne les avez jamais vus auparavant, en 3D ! </p>
 
-        <p>Creed - L'Héritage de Rocky Balboa</p>
+        <h2>Creed - L'Héritage de Rocky Balboa</h2>
         <img class="sam" src="img/creed.jpg" />
-        <p class="disp">Adonis Johnson n'a jamais connu son père, le célèbre champion du monde poids lourd Apollo Creed,</br> décédé avant sa naissance. Malgré tout, il a de toute évidence la boxe dans le sang </br>et il se rend donc à Philadelphie, là même où Apollo Creed a affronté </br>un adversaire ambitieux, Rocky Balboa... </p>
-
-        <p>Tout schuss</p>
+        <p class="disp">Adonis Johnson n'a jamais connu son père, le célèbre champion du monde poids lourd Apollo Creed,</br> décédé avant sa naissance. Malgré tout, il a de toute évidence la boxe dans le sang </br>et il se rend donc à Philadelphie, là même où Apollo
+          Creed a affronté </br>un adversaire ambitieux, Rocky Balboa... </p>
+        <a id="foot"> </a>
+        <h2>Tout schuss</h2>
         <img class="sam" src="img/tout.jpg" />
-        <p class="disp">Max Salinger, écrivain divorcé, flamboyant et égocentrique, refuse d’accueillir sa fille de 15 ans sous son toit.</br> Pour se venger, elle lui vole son dernier manuscrit et file en classe de neige. Pour récupérer son bien, </br>Max n’a alors pas d’autre choix que de débarquer dans la station de ski en s’improvisant « parent accompagnateur ». </p>
+        <p class="disp">Max Salinger, écrivain divorcé, flamboyant et égocentrique, refuse d’accueillir sa fille de 15 ans sous son toit.</br> Pour se venger, elle lui vole son dernier manuscrit et file en classe de neige. Pour récupérer son bien, </br>Max n’a alors
+          pas d’autre choix que de débarquer dans la station de ski en s’improvisant « parent accompagnateur ». </p>
 
       </div>
 
@@ -69,5 +79,17 @@
     <div>
     </div>
   </footer>
+  <script type='text/javascript'>
+    $(function() {
+      $(window).scroll(function() { //Au scroll dans la fenetre on déclenche la fonction
+        if ($(this).scrollTop() > 100) { //si on a défilé de plus de 150px du haut vers le bas
+          $('#navigation').addClass("fixNavigation"); //on ajoute la classe "fixNavigation" à
 
+        } else {
+          $('#navigation').removeClass("fixNavigation"); //sinon on retire la classe "fixNavigation" à
+
+        }
+      });
+    });
+  </script>
 </body>
